@@ -52,4 +52,5 @@ In ```/covid_model``` dir, **covid_dataset.csv** is used while building model. F
 <br>
 <hr>
 <br>
+
 ***Have a Good Day!***
