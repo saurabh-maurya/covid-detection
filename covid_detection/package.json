@@ -1,0 +1,23 @@
+{
+  "name": "covid_detection_app",
+  "version": "1.0.0",
+  "description": "node project with mySQL database connection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Archit Gupta",
+  "license": "MIT",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.2",
+    "express-validator": "^5.3.0",
+    "method-override": "^3.0.0",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2"
+  }
+}

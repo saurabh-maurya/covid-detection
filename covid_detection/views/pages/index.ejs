@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">COVID DETECTION APP</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex">
+						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+							<div class="text w-100">
+								<h2>Welcome to login</h2>
+								<p>Don't have an account?</p>
+								<a href="/signup" class="btn btn-white btn-outline-white">Sign Up</a>
+							</div>
+						</div>
+						<div class="login-wrap p-4 p-lg-5">
+							<div class="d-flex">
+								<div class="w-100">
+									<h3 class="mb-4">Sign In</h3>
+								</div>
+							</div>
+							<form action="/authentication" method="POST" class="signin-form">
+								<div class="form-group mb-3">
+									<label class="label" for="name">Phone Number</label>
+									<input type="text" maxlength="10" minlength="10" class="form-control"
+									name="phone" placeholder="Phone Number" required="required" pattern="[1-9]{1}[0-9]{9}"
+										title="Enter correct phone number">
+								</div>
+								<div class="form-group mb-3">
+									<label class="label" for="pin">PIN</label>
+									<input type="text" maxlength="4" minlength="4" class="form-control"
+									name="pin"  placeholder="pin" id="pin" required="required" pattern="[0-9]{4}"
+										title="PIN consist of 4-Digit number">
+								</div>
+								<div class="form-group">
+									<button type="submit" class="form-control btn btn-primary submit px-3">Sign
+										In</button>
+								</div>
+								<div class="form-group d-md-flex">
+									<div class="w-50 text-left">
+										<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+											<input type="checkbox" checked>
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

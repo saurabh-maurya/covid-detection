@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">COVID DETECTION APP</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-10">
+                    <div class="wrap d-md-flex">
+                        <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+                            <div class="text w-100">
+                                <h2>Welcome to Sign Up</h2>
+                                <p>Already have an account?</p>
+                                <a href="/signin" class="btn btn-white btn-outline-white">Sign In</a>
+                            </div>
+                        </div>
+                        <div class="login-wrap p-4 p-lg-5">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4">Sign Up</h3>
+                                </div>
+                            </div>
+                            <form action="/createUser" method="POST" class="signin-form">
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="Full Name" id="name" name="name"
+                                    required="required">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="phone">Phone Number</label>
+                                    <input type="text" maxlength="10" minlength="10" class="form-control"
+                                    name="phone" placeholder="Phone Number" id="phone" required="required"
+                                        pattern="[1-9]{1}[0-9]{9}" title="Enter correct phone number">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="pin">PIN</label>
+                                    <input type="text" maxlength="4" minlength="4" class="form-control"
+                                        placeholder="pin" id="pin" name="pin"  required="required" pattern="[0-9]{4}"
+                                        title="PIN consist of 4-Digit number">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="confirm_pin">Confirm PIN</label>
+                                    <input type="text" maxlength="4" minlength="4" size="4" class="form-control"
+                                        placeholder="confirm pin" id="confirm_pin" required="required">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="dob">Date of Birth</label>
+                                    <input type="date" id="dob" maxlength="10" minlength="10" class="form-control"
+                                    name="dob" placeholder="Date of Birth">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="address">Location</label>
+                                    <div id="address"></div>
+                                    <input type="hidden" id="addressInput" class="form-control"
+                                    name="address">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control btn btn-primary submit px-3">Sign
+                                        In</button>
+                                </div>
+                                <script>
+                                    var pin = document.getElementById("pin")
+                                        , confirm_pin = document.getElementById("confirm_pin");
+
+                                    function validatePassword() {
+                                        if (pin.value != confirm_pin.value) {
+                                            confirm_pin.setCustomValidity("PIN Don't Match");
+                                        } else {
+                                            confirm_pin.setCustomValidity('');
+                                        }
+                                    }
+
+                                    pin.onchange = validatePassword;
+                                    confirm_pin.onkeyup = validatePassword;
+                                </script>
+                                <script>
+                                    document.body.onload = function () {
+                                        if (navigator.geolocation) {
+                                            navigator.geolocation.getCurrentPosition(function (position) {
+                                                var positionInfo = "Latitude: " + position.coords.latitude.toFixed(4) + ", " + "Longitude: " + position.coords.longitude.toFixed(4);
+                                                document.getElementById("address").innerHTML = positionInfo;
+                                                document.getElementById("addressInput").value = positionInfo;
+                                            });
+                                        } else {
+                                            alert("Sorry, your browser does not support HTML5 geolocation.");
+                                        }
+                                    }
+                                </script>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

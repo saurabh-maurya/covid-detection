@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Covid Detection</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">COVID DETECTION APP</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="background-color: rgb(253, 253, 253)">
+                <div class="col-md-12 col-lg-10">
+                    <br>
+                    <div class="d-flex">
+                        <div class="w-100">
+                            <h3 class="mb-4">Covid Detection Test</h3>
+                        </div>
+                    </div>
+                    <form action="updateCovidStatus" method="POST" class="signin-form">
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Are you experiencing any shortness of breath or difficulty breathing ?</b></p> 
+                                <input type="radio" id="Q1yes" name="Q1" value="1" required="required">
+                                <label for="Q1yes">Yes</label>
+                                <input type="radio" id="Q1no" name="Q1" value="0">
+                                <label for="Q1no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Are you experiencing any of the following: loss of speech mobility or confusion ?</b></p> 
+                                <input type="radio" id="Q2yes" name="Q2" value="1" required="required">
+                                <label for="Q2yes">Yes</label>
+                                <input type="radio" id="Q2no" name="Q2" value="0">
+                                <label for="Q2no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Are you experiencing any chest pain ?</b></p> 
+                                <input type="radio" id="Q3yes" name="Q3" value="1" required="required">
+                                <label for="Q3yes">Yes</label>
+                                <input type="radio" id="Q3no" name="Q3" value="0">
+                                <label for="Q3no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Do you have fever ?</b></p> 
+                                <input type="radio" id="Q4yes" name="Q4" value="1" required="required">
+                                <label for="Q4yes">Yes</label>
+                                <input type="radio" id="Q4no" name="Q4" value="0">
+                                <label for="Q4no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Do you have cough ?</b></p> 
+                                <input type="radio" id="Q5yes" name="Q5" value="1" required="required">
+                                <label for="Q5yes">Yes</label>
+                                <input type="radio" id="Q5no" name="Q5" value="0">
+                                <label for="Q5no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Are you feeling tired ?</b></p> 
+                                <input type="radio" id="Q6yes" name="Q6" value="1" required="required">
+                                <label for="Q6yes">Yes</label>
+                                <input type="radio" id="Q6no" name="Q6" value="0">
+                                <label for="Q6no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Are you experiencing loss of taste or smell ?</b></p> 
+                                <input type="radio" id="Q7yes" name="Q7" value="1" required="required">
+                                <label for="Q7yes">Yes</label>
+                                <input type="radio" id="Q7no" name="Q7" value="0">
+                                <label for="Q7no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Do you have sore throat ?</b></p> 
+                                <input type="radio" id="Q8yes" name="Q8" value="1" required="required">
+                                <label for="Q8yes">Yes</label>
+                                <input type="radio" id="Q8no" name="Q8" value="0">
+                                <label for="Q8no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Do you have headaches ?</b></p> 
+                                <input type="radio" id="Q9yes" name="Q9" value="1" required="required">
+                                <label for="Q9yes">Yes</label>
+                                <input type="radio" id="Q9no" name="Q9" value="0">
+                                <label for="Q9no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Are you experiencing aches and pain ?</b></p> 
+                                <input type="radio" id="Q10yes" name="Q10" value="1" required="required">
+                                <label for="Q10yes">Yes</label>
+                                <input type="radio" id="Q10no" name="Q10" value="0">
+                                <label for="Q10no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b> Are you having diarrhoea ?</b></p> 
+                                <input type="radio" id="Q11yes" name="Q11" value="1" required="required">
+                                <label for="Q11yes">Yes</label>
+                                <input type="radio" id="Q11no" name="Q11" value="0">
+                                <label for="Q11no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Are there any signs of rash skin ?</b></p> 
+                                <input type="radio" id="Q12yes" name="Q12" value="1" required="required">
+                                <label for="Q12yes">Yes</label>
+                                <input type="radio" id="Q12no" name="Q12" value="0">
+                                <label for="Q12no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Do you have red or irritation in eyes ?</b></p> 
+                                <input type="radio" id="Q13yes" name="Q13" value="1" required="required">
+                                <label for="Q13yes">Yes</label>
+                                <input type="radio" id="Q13no" name="Q13" value="0">
+                                <label for="Q13no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Are you experiencing runny nose ?</b></p> 
+                                <input type="radio" id="Q14yes" name="Q14" value="1" required="required">
+                                <label for="Q14yes">Yes</label>
+                                <input type="radio" id="Q14no" name="Q14" value="0">
+                                <label for="Q14no">No</label>
+                            </div>
+                        </div>
+                        <div class="card_question form-group mb-3">
+                            <div class="card_container" style="background-color: rgb(248, 248, 248);">
+                                <br>
+                                <p><b>Are there any signs of vomiting ?</b></p> 
+                                <input type="radio" id="Q15yes" name="Q15" value="1" required="required">
+                                <label for="Q15yes">Yes</label>
+                                <input type="radio" id="Q15no" name="Q15" value="0">
+                                <label for="Q15no">No</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="form-control btn btn-primary submit px-3">Submit Test</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
