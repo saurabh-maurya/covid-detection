@@ -26,6 +26,7 @@ The application is used to detect level of covid infection based on certain ques
 ### Database - MysSQL
 It is used to stroe information reated to the user.
 TABLE Creation, run script in sql -
+```
 Columns -> CREATE TABLE `covid_user` (
   `phone_no` int NOT NULL,
   `pin` int NOT NULL,
@@ -35,7 +36,7 @@ Columns -> CREATE TABLE `covid_user` (
   `covid_status` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`phone_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+```
 ### Dataset - for model building
 In ```/covid_model``` dir, **covid_dataset.csv** is used while building model. For more info related to column see *covid_dataset_readme.txt* in ```/covid_model``` dir.
 
