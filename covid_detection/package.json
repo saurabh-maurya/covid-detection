@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Archit Gupta",
+  "author": "Saurabh Maurya",
   "license": "MIT",
   "dependencies": {
     "cookie-parser": "^1.4.5",
